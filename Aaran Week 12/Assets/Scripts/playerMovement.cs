@@ -21,6 +21,8 @@ public class playerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public int sprint;
 
+    public int health, stamina, magick;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,15 +57,6 @@ public class playerMovement : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         inputDirection = new Vector2(x, y).normalized;
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            moveSpeed = moveSpeed + sprint;
-        }
-        else
-        {
-            moveSpeed = 5;
-        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
