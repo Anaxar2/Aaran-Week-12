@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEditor;
+//using UnityEditor;
 
 public class GameOver : MonoBehaviour
 {
@@ -27,8 +27,8 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void QuitGame()
+    /*public void QuitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
-    }
+    }*/
 }

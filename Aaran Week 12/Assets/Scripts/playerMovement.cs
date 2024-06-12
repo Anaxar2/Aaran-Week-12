@@ -5,11 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-<<<<<<< Updated upstream
-//using UnityEngine.InputSystem;
-=======
 using UnityEngine.InputSystem;
->>>>>>> Stashed changes
 
 public class playerMovement : MonoBehaviour
 {
@@ -30,12 +26,8 @@ public class playerMovement : MonoBehaviour
 
     public GameObject gameOverUI;
 
-<<<<<<< Updated upstream
-    PlayerInput _playerInput
-=======
     PlayerInput _playerInput;
     InputAction moveAction;
->>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
