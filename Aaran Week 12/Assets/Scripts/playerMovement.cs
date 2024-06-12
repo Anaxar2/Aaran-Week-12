@@ -5,6 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+//using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class playerMovement : MonoBehaviour
     public int health, stamina, magick;
 
     public GameObject gameOverUI;
+
+    PlayerInput _playerInput
 
     // Start is called before the first frame update
     void Start()
