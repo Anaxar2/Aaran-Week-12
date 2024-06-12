@@ -23,6 +23,8 @@ public class playerMovement : MonoBehaviour
 
     public int health, stamina, magick;
 
+    public GameObject gameOverUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -160,6 +162,14 @@ public class playerMovement : MonoBehaviour
         {
             inputDirection = Vector2.zero;
             dpad.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Fire"))
+        {
+            gameOverUI.SetActive(true);
         }
     }
 }

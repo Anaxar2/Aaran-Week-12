@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tutorial_MobileInput.unity
+    guid: 2de987227f3324d43af041361e687592
+  - enabled: 1
     path: Assets/Scenes/Preprocessor Directives.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
