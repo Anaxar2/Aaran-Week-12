@@ -5,7 +5,11 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+<<<<<<< Updated upstream
 //using UnityEngine.InputSystem;
+=======
+using UnityEngine.InputSystem;
+>>>>>>> Stashed changes
 
 public class playerMovement : MonoBehaviour
 {
@@ -26,7 +30,12 @@ public class playerMovement : MonoBehaviour
 
     public GameObject gameOverUI;
 
+<<<<<<< Updated upstream
     PlayerInput _playerInput
+=======
+    PlayerInput _playerInput;
+    InputAction moveAction;
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +44,9 @@ public class playerMovement : MonoBehaviour
 
         //makes the character look down by default
         lookDirection = new Vector2(0, -1);
+
+        _playerInput = GetComponent<PlayerInput>();
+        moveAction = _playerInput.actions.FindAction("Move");
     }
 
     // Update is called once per frame
@@ -58,10 +70,12 @@ public class playerMovement : MonoBehaviour
 
     void calculateDesktopInputs()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        /*float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        inputDirection = new Vector2(x, y).normalized;
+        inputDirection = new Vector2(x, y).normalized;*/
+
+        inputDirection = moveAction.ReadValue<Vector2>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -132,7 +146,7 @@ public class playerMovement : MonoBehaviour
         }
     }
 
-    void CalculateTouchInputs()
+    /*void CalculateTouchInputs()
     {
         if (Input.touchCount > 0) // gets left mouse button
         {
@@ -166,7 +180,7 @@ public class playerMovement : MonoBehaviour
             inputDirection = Vector2.zero;
             dpad.gameObject.SetActive(false);
         }
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
