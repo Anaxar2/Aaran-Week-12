@@ -22,12 +22,14 @@ public class playerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public int sprint;
 
-    public int health, stamina, magick;
+    public float health, stamina, magick, maxHealth, maxStamina, maxMagick;
 
     public GameObject gameOverUI;
 
     PlayerInput _playerInput;
     InputAction moveAction;
+
+    public Slider healthBar, staminaBar, manaBar;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +59,11 @@ public class playerMovement : MonoBehaviour
 
         //moves the player
         transform.Translate(inputDirection * moveSpeed * Time.deltaTime);
-    }
 
+        healthBar.value = health / maxHealth;
+        staminaBar.value = stamina / maxStamina;
+        manaBar.value = magick / maxMagick;
+    }
 
     void calculateDesktopInputs()
     {

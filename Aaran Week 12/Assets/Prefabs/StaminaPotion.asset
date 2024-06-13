@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7943e4e4da05054459ec02d46ab0197f, type: 3}
-  m_Name: Potion1
+  m_Name: StaminaPotion
   m_EditorClassIdentifier: 
-  health: 5
-  stamina: 0
+  health: 0
+  stamina: 20
   magick: 0
